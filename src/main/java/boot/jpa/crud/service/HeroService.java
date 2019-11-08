@@ -42,4 +42,7 @@ public class HeroService {
     public Long HeroUpdateRequest(HeroUpdateRequestDto dto) {
         return heroRepository.save(dto.toEntity()).getId();
     }
+
+    @Transactional
+    public void HeroDeleteByIdRequest(Long id) { heroRepository.deleteById(id); }
 }

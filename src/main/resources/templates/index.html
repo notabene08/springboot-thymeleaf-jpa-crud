@@ -16,6 +16,7 @@
         <th>Note</th>
         <th>Modified Date</th>
         <th>Modify</th>
+        <th>Delete</th>
     </tr>
     </thead>
 
@@ -30,6 +31,9 @@
             <a href="#updateModal" class="modal-trigger" th:text="modify"
                th:onclick="|javascript:findById(*{id})|">
             </a>
+        </td>
+        <td>
+            <a href="#!" th:text="delete" th:onclick="|javascript:deleteById(*{id})|"></a>
         </td>
     </tr>
     </tbody>
